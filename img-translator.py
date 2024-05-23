@@ -35,7 +35,7 @@ def select_image(label_img, label_original, label_translated):
         label_translated.config(text=translated_text)
 
 window = Tk()
-window.geometry("550x600")
+window.geometry("550x500")
 window.title("Image Translator")
 
 top_frame = Frame(window)
