@@ -1,3 +1,5 @@
+# install essential libraries first
+
 from tkinter import Tk, Button, Label, Frame
 from tkinter.filedialog import askopenfilename
 from PIL import Image, ImageTk
@@ -6,20 +8,39 @@ from deep_translator import GoogleTranslator
 from bidi.algorithm import get_display
 import arabic_reshaper
 
+
+
+# for pytesseract you have to address Tesseract-OCR\tesseract.exe 
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
-def get_img_text(image_path):
-    with Image.open(image_path) as img_open:
+def get_img_text(file_path):
+    '''
+    this function read the text in the image then transforme it to string.
+    
+    '''
+    with Image.open(file_path) as img_open:
         text = pytesseract.image_to_string(img_open)
         return text
 
 def translate_text(text):
+    '''
+    this function translate the selected languege to the target languege,
+    (here we have english as selected languege and farsi as target languege)
+    we also  handled text reshaping and display using arabic_reshaper and bidi.algorithm.
+    
+    '''
     translation = GoogleTranslator(source="en", target="fa").translate(text)
     reshaped_text = arabic_reshaper.reshape(translation)
     bidi_text = get_display(reshaped_text)
     return bidi_text
 
 def select_image(label_img, label_original, label_translated):
+    '''
+    select the image and uploade and display it on the app then using 'get_img_text' function, 
+    extract the image then using 'translate_text' function it translate the text to the target 
+    language.
+    
+    '''
     file_path = askopenfilename(title="Select image")
     if file_path:
         img = Image.open(file_path)
