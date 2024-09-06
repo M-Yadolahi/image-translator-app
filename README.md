@@ -12,3 +12,8 @@ you can run the img-translator.exe or simply copy and paste the code to your cod
 
 simply run the program and click on the upload image button and then select your image and upload it.
 
+## mentour
+
+I developed this project with the invaluable help of my teacher and mentour Miss Mehrnaz Hosseini.
+
+thanks to  [Mehrnaz Hosseini](https://www.instagram.com/mehrnazhosseini01?igsh=MWk0ZWlpM2s0Z3Axbw==) 
