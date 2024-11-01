@@ -17,3 +17,5 @@ simply run the program and click on the upload image button and then select your
 I developed this project with the invaluable help of my teacher and mentour Miss Mehrnaz Hosseini.
 
 thanks to  [Mehrnaz Hosseini](https://www.instagram.com/mehrnazhosseini01?igsh=MWk0ZWlpM2s0Z3Axbw==) 
+
+![Demo](https://github.com/M-Yadolahi/image-translator-app/blob/main/demo.gif)
